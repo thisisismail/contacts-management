@@ -1,0 +1,21 @@
+<% if (!contact) { %>
+<div class="alert alert-danger mx-auto" role="alert">
+  There is no such account
+  <br>
+  <a href="/contact" class="link fw-bold">&xlArr; Back</a>
+</div>
+<% } else { %>
+<div class="card mt-4 mx-auto" style="width: 18rem;">
+  <div class="card-header">
+    <h5 class="card-text"><%= contact.name %></h5>
+  </div>
+  <div class="card-body fs-1">
+    <h5 class="card-text"><%= contact.email %></h5>
+    <div>
+      <a href="/contact/delete/<%= contact.name %> " type="button" class="btn btn-danger badge rounded-pill" onclick="return confirm('Are you sure')">Delete</a>
+      <a href="/contact/edit/<%= contact.name %> " type="button" class="btn btn-info badge rounded-pill">Edit</a>
+    </div>
+    <a href="/contact" class="link fw-bold">&xlArr; Back</a>
+  </div>
+</div>
+<% } %>

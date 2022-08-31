@@ -1,0 +1,26 @@
+<h1>Editing Contact</h1>
+<% if (typeof errors !== 'undefined') { %>
+<div class="alert alert-danger alert-dismissible">
+  <a href="/contact/edit/<%= contact.oldName %> " class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Error!</strong><br><br>
+  <% errors.forEach(error => { %>
+  <ul>
+    <li><%= error.msg %> </li>
+  </ul>
+  <% }) %>
+</div>
+<% } %>
+<!-- If we are using RESTFUL API, it can be done by just setting the method into "put" -->
+<!-- But today we are not using RESTFUL API, so we should have different URL instead -->
+<form method="post" action="/contact/update">
+  <input type="hidden" name="oldName" value="<%= contact.name %>">
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" aria-describedby="nameHelp" name="name" value="<%= contact.name %>" required>
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" value="<%= contact.email%>" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Update contact</button>
+</form>
