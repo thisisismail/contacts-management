@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "14.x"
+  },
   "dependencies": {
     "bootstrap-icons": "^1.9.1",
     "connect-flash": "^0.1.1",
@@ -9,5 +12,23 @@
     "express-session": "^1.17.3",
     "express-validator": "^6.14.2",
     "morgan": "^1.10.0"
-  }
+  },
+  "name": "contact-app-express",
+  "description": "",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thisisismail/contacts-management.git"
+  },
+  "author": "Ismail",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thisisismail/contacts-management/issues"
+  },
+  "homepage": "https://github.com/thisisismail/contacts-management#readme"
 }
